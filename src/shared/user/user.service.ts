@@ -1,10 +1,10 @@
 import { Injectable } from '@nestjs/common';
 
 import { Repository } from 'typeorm';
-import { UserEntity } from '#entity/user.entity';
 import { InjectRepository } from '@nestjs/typeorm';
 import { UserService } from './user.interface';
-import { MissingFieldsError } from 'src/common/errors';
+import { UserEntity } from '#db/entities';
+import { MissingFieldsError } from '#common/errors';
 
 @Injectable()
 export class UserServiceImpl implements UserService {

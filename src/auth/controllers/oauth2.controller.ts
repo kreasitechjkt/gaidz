@@ -10,11 +10,11 @@ import type { Request, Response } from 'express';
 import {
   GoogleOAuth2Guard,
 } from '../guards';
-import { Api } from 'src/common';
 import { ProviderAuthPayload, JwtSign } from '../types';
 import { ApiTags } from '@nestjs/swagger';
 import { AuthServiceImpl } from '../providers';
 import { AuthService } from '../interfaces';
+import { Api } from '#common/responses';
 
 @Controller({
   version: '1'

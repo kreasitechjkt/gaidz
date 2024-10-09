@@ -45,9 +45,12 @@ $ npm run test:cov
 $ npm run doc #> http://localhost:8080
 
 # API, Swagger
-$ npm run doc:api #> http://{host}:{port}/api
+$ npm run doc:api 
+
+#> http://{host}:{port}/docs/back-office-api/
 ```
 
 # Resources
 - [nestjs-project-structure](https://github.com/CatsMiaow/nestjs-project-structure)
 - [awesome-nestjs](https://github.com/nestjs/awesome-nestjs)
+- [reviews-calculation](https://stackoverflow.com/questions/10196579/algorithm-used-to-calculate-5-star-ratings)

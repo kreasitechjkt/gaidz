@@ -1,7 +1,6 @@
 import { Controller, Get, UseGuards } from '@nestjs/common';
 import { AppService } from './app.service';
 import { AuthenticatedGuard } from './auth';
-import { MissingFieldsError } from './common/errors';
 
 import {
   HealthCheck,
@@ -11,6 +10,7 @@ import {
   HttpHealthIndicator,
   TypeOrmHealthIndicator,
 } from '@nestjs/terminus';
+import { MissingFieldsError } from '#common/errors';
 
 @Controller()
 export class AppController {

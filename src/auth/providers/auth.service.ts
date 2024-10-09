@@ -2,12 +2,13 @@ import { ForbiddenException, Inject, Injectable } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 
 import { UserService, UserServiceImpl } from '../../shared/user';
-import { DataNotFoundError } from 'src/common/errors';
-import { UserEntity } from '#entity/user.entity';
-import { AppProvider, ConfigService } from 'src/common';
 import * as bcrypt from 'bcrypt';
 import { AuthService } from '../interfaces';
 import { AuthPayload, JwtSign, ProviderAuthPayload } from '../types';
+import { UserEntity } from '#db/entities';
+import { ConfigService } from '#common/providers';
+import { AppProvider } from '#common/enums';
+import { DataNotFoundError } from '#common/errors';
 
 @Injectable()
 export class AuthServiceImpl implements AuthService {

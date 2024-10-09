@@ -4,7 +4,7 @@
     "paths": {
       // https://docs.nestjs.com/cli/scripts#build
       // https://nodejs.org/api/packages.html#imports
-      "#entity/*": ["./src/db/entities/*"],
+      "#db/*": ["./src/db/*"],
       "#common/*": ["./src/common/*"],
       "#shared/*": ["./src/shared/*"],
       "#debug/*": ["./src/debug/*"]

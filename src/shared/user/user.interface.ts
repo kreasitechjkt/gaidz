@@ -1,4 +1,4 @@
-import { UserEntity } from '#entity/user.entity';
+import { UserEntity } from "#db/entities";
 
 export interface UserService {
   // TODO: docs

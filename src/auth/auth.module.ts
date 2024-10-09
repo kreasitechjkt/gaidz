@@ -7,8 +7,8 @@ import { LocalStrategy, JwtStrategy, JwtVerifyStrategy } from './strategies';
 import { UserModule } from '../shared/user';
 import { PassportModule } from '@nestjs/passport';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { UserEntity } from '#entity/user.entity';
 import { AuthController } from './controllers';
+import { UserEntity } from '#db/entities';
 
 @Global()
 @Module({

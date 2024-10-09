@@ -5,8 +5,9 @@ import {
   Logger,
 } from '@nestjs/common';
 import { Strategy } from 'passport-facebook';
-import { AppProvider, ConfigService } from 'src/common';
 import { ProviderAuthPayload } from '../types';
+import { ConfigService } from '#common/providers';
+import { AppProvider } from '#common/enums';
 
 @Injectable()
 export class FacebookStrategy extends PassportStrategy(Strategy, 'facebook') {

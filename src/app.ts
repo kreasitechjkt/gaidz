@@ -20,8 +20,6 @@ async function bootstrap(): Promise<string> {
     bufferLogs: true,
   });
 
-  app.setGlobalPrefix("api")
-
   if (isProduction) {
     app.enable('trust proxy');
   }

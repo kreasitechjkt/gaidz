@@ -1,4 +1,4 @@
-import { UserEntity } from '#entity/user.entity';
+import { UserEntity } from '#db/entities';
 import { AuthPayload, JwtSign, ProviderAuthPayload } from '../types';
 
 export interface AuthService {

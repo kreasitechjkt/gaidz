@@ -3,10 +3,10 @@ import { PassportStrategy } from '@nestjs/passport';
 import { IVerifyOptions, Strategy } from 'passport-local';
 
 import type { AuthService } from '../interfaces';
-import { AppProvider } from 'src/common';
 import { Request } from 'express';
 import { AuthServiceImpl } from '../providers';
 import { AuthPayload } from '../types';
+import { AppProvider } from '#common/enums';
 
 @Injectable()
 export class LocalStrategy extends PassportStrategy(Strategy) {

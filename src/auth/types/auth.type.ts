@@ -1,4 +1,4 @@
-import { AppProvider } from "src/common";
+import { AppProvider } from "#common/enums";
 
 export type JwtSign = {
   access_token: string;

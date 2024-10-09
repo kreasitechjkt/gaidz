@@ -4,6 +4,8 @@ export * from './decorators';
 export * from './filters';
 export * from './enums';
 export * from './constants';
+export * from './types';
+export * from './interfaces';
 export * from './requests';
 export * from './responses';
 export * from "./utils";
