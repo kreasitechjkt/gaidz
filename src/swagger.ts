@@ -7,7 +7,7 @@ import { WinstonModule } from 'nest-winston';
 import { createLogger } from 'winston';
 import { loggerOptions } from './config';
 import { AuthModule } from './auth';
-import { MasterModule } from './master';
+import { BackOfficeModule } from './back-office';
 
 /**
  * https://docs.nestjs.com/recipes/swagger
@@ -25,7 +25,10 @@ async function bootstrap(): Promise<string> {
     .setVersion('1.0')
     .addBearerAuth()
     .build();
-  const backofficeDocument = SwaggerModule.createDocument(app, backoffice, { include: [AuthModule, MasterModule] });
+  const backofficeDocument = SwaggerModule.createDocument(app, backoffice, {
+    deepScanRoutes: true,
+    include: [AuthModule, BackOfficeModule],
+  });
   SwaggerModule.setup('docs/back-office-api', app, backofficeDocument);
 
 
